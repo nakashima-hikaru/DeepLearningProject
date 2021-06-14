@@ -19,10 +19,10 @@ check_data_loader_contents(train_loader)
 
 test_input = torch.ones(128, 3, 32, 32)
 
-conv_net = nn.Sequential(nn.Conv2d(in_channels=3, out_channels=32, kernel_size=5),  # [128, 32, 28, 28]
+conv_net = nn.Sequential(nn.Conv2d(in_channels=3, out_channels=32, kernel_size=(5, )),  # [128, 32, 28, 28]
                          nn.MaxPool2d(kernel_size=2),  # [128, 32, 14, 14]
                          nn.ReLU(),  # [128, 32, 14, 14]
-                         nn.Conv2d(in_channels=, out_channels=10, kernel_size=5),
+                         # nn.Conv2d(in_channels=3, out_channels=10, kernel_size=(5, )),
                          )
 
 conv_output_size = conv_net(test_input).size()[-1]
