@@ -8,7 +8,7 @@ from util import check_data_loader_contents
 
 
 # download the dataset
-my_path = '/Users/nakashimahikaru/PycharmProjects/DeepLearningProject/'
+my_path = '/Users/nakashimahikaru/PycharmProjects/DeepLearningProject/dataset/'
 cifar10_train = CIFAR10(root='{}/cifar-10'.format(my_path), train=True, transform=transforms.ToTensor())
 cifar10_test = CIFAR10(root='{}/cifar-10'.format(my_path), train=False, transform=transforms.ToTensor())
 
